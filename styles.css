@@ -246,18 +246,13 @@ body.active .contenedor {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   align-items: flex-start;
-  column-gap: 30px;
-  row-gap: 50px;
+  column-gap: 35px;
+  row-gap: 40px;
   padding: 30px;
 }
 .video {
   display: flex;
   flex-direction: column;
-}
-.video iframe {
-  width: 100%;
-  height: 240px;
-  flex: auto;
 }
 .video div {
   display: flex;
@@ -265,8 +260,13 @@ body.active .contenedor {
   gap: 10px;
   margin-top: 5px;
 }
-.video img {
-  max-width: 40px;
+.video .video__poster{
+  max-width: 100%;
+  border-radius: 5px;
+}
+.video .usuario {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 .video h2 {
@@ -279,7 +279,7 @@ body.active .contenedor {
   overflow: hidden;
 }
 .video p {
-  color: gray;
+  color: rgb(230, 241, 255);
   font-size: 12px;
 }
 .video div > div {
@@ -287,6 +287,32 @@ body.active .contenedor {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+}
+.botones{
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+.botones button{
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: var(--transition);
+  background: #292929;
+  border: 1px solid rgb(67, 67, 67);
+}
+.botones button:hover{
+  background: #1d1d1d;
+  border: 1px solid rgb(98, 98, 98);
 }
 @media (max-width: 3000px) {
   .videos {
@@ -329,6 +355,13 @@ body.active .contenedor {
 @media (max-width: 890px) {
   .videos {
     grid-template-columns: 1fr;
+  }
+  .icono-left,
+  .icono-right{
+    display: none;
+  }
+  .header__bottom{
+    padding: 10px;
   }
   .video iframe {
     height: 300px;
