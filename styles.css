@@ -60,6 +60,9 @@ body.active .header {
   gap: 20px;
   padding: 5px;
 }
+.formulario form.error{
+  border: 1px solid rgba(255, 0, 0, 0.203);
+}
 .formulario form {
   width: 600px;
   background: #121212;
@@ -309,7 +312,13 @@ body.active .contenedor {
   .videos {
     grid-template-columns: repeat(2, 1fr);
   }
-  .formulario {
+  .formulario{
+    width: 100%;
+  }
+  .formulario form{
+    width: 100%;
+  }
+  .iconos i.bx {
     display: none;
   }
   .header__top {
@@ -324,6 +333,15 @@ body.active .contenedor {
   .video iframe {
     height: 300px;
   }
+  .formulario  i.bx{
+    display: none;
+  }
+  .formulario{
+    gap: 0;
+  }
+  .formulario form button  i.bx{
+    display: block;
+  }
 }
 @media (max-width: 550px) {
   .video iframe {
@@ -334,9 +352,6 @@ body.active .contenedor {
   .video h2 {
     width: 100%;
   }
-  .iconos i.bx {
-    display: none;
-  }
   .header {
     width: 100%;
     left: 0;
@@ -346,6 +361,33 @@ body.active .contenedor {
   }
   .contenedor {
     padding-left: 0;
+  }
+}
+@media (max-width: 520px) {
+  .header{
+    position: static;
+    padding-top: 85px;
+    z-index: 0;
+  }
+  .header__top{
+    flex-direction: column;
+    position: relative;
+  }
+  .formulario{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(33, 33, 33, 0.98);
+    z-index: 100;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .iconos{
+    display: none;
+  }
+  :root{
+    --w-top: 0px;
   }
 }
 @media (max-width: 350px) {
