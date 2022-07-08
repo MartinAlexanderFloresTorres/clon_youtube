@@ -53,8 +53,13 @@ function getBusquedad(q) {
 const contenedor = document.querySelector(".videos");
 const mas = document.querySelector("#mas");
 
-const API_KEY = "AIzaSyCATEYlOy9S409UZl2Dv9jHzm6nzSao91U";
-const API_VIDEO = "https://www.googleapis.com/youtube/v3/videos?";
+const API_KEY = "";
+const API_VIDEO = "";
+
+/* 
+  cree su api key aqui : https://console.cloud.google.com/apis/
+  consulte el api video list aqui : https://developers.google.com/youtube/v3/docs/videos/list
+*/
 let resultados = 20;
 
 //=============== api ===============//
